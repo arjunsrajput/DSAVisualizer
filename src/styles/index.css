@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  body {
+    background-color: #080b14;
+    color: #e2e8f0;
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0;
+  }
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: #0f1624; }
+  ::-webkit-scrollbar-thumb { background: #2d3748; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #4a5568; }
+}
+
+@layer components {
+  .algo-card {
+    @apply bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-cyan-700 transition-all duration-200 cursor-pointer;
+  }
+  .btn-primary {
+    @apply px-4 py-2 bg-cyan-600 hover:bg-cyan-500 text-white rounded-lg font-medium transition-all duration-150 text-sm;
+  }
+  .btn-ghost {
+    @apply px-4 py-2 bg-gray-800 hover:bg-gray-700 border border-gray-700 hover:border-gray-600 text-gray-300 rounded-lg font-medium transition-all duration-150 text-sm;
+  }
+  .panel {
+    @apply bg-gray-900 border border-gray-800 rounded-xl;
+  }
+  .tag-easy { @apply text-emerald-400 bg-emerald-400/10 border border-emerald-400/20 text-xs px-2 py-0.5 rounded-full font-mono; }
+  .tag-medium { @apply text-amber-400 bg-amber-400/10 border border-amber-400/20 text-xs px-2 py-0.5 rounded-full font-mono; }
+  .tag-hard { @apply text-rose-400 bg-rose-400/10 border border-rose-400/20 text-xs px-2 py-0.5 rounded-full font-mono; }
+  .animate-fadeIn {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+:root.light-theme body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+:root.light-theme ::-webkit-scrollbar-track { background: #e2e8f0; }
+:root.light-theme ::-webkit-scrollbar-thumb { background: #94a3b8; }
+:root.light-theme ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+
+:root.light-theme .bg-gray-950 { background-color: #f8fafc !important; }
+:root.light-theme .bg-gray-900 { background-color: #ffffff !important; }
+:root.light-theme .bg-gray-900\/20 { background-color: rgba(226, 232, 240, 0.55) !important; }
+:root.light-theme .bg-gray-900\/30 { background-color: rgba(226, 232, 240, 0.7) !important; }
+:root.light-theme .bg-gray-800 { background-color: #f1f5f9 !important; }
+:root.light-theme .bg-gray-800\/50 { background-color: rgba(226, 232, 240, 0.7) !important; }
+:root.light-theme .bg-gray-800\/30 { background-color: rgba(241, 245, 249, 0.9) !important; }
+:root.light-theme .bg-gray-800\/40 { background-color: rgba(241, 245, 249, 0.9) !important; }
+:root.light-theme .bg-gray-700 { background-color: #e2e8f0 !important; }
+:root.light-theme .bg-slate-700 { background-color: #e2e8f0 !important; }
+:root.light-theme .bg-slate-600 { background-color: #cbd5e1 !important; }
+:root.light-theme .bg-slate-500 { background-color: #94a3b8 !important; }
+
+:root.light-theme .border-gray-800 { border-color: #cbd5e1 !important; }
+:root.light-theme .border-gray-800\/50 { border-color: rgba(148, 163, 184, 0.5) !important; }
+:root.light-theme .border-gray-800\/40 { border-color: rgba(148, 163, 184, 0.45) !important; }
+:root.light-theme .border-gray-700 { border-color: #94a3b8 !important; }
+:root.light-theme .border-gray-700\/50 { border-color: rgba(100, 116, 139, 0.55) !important; }
+:root.light-theme .border-gray-600 { border-color: #64748b !important; }
+:root.light-theme .border-slate-600 { border-color: #94a3b8 !important; }
+:root.light-theme .border-slate-500 { border-color: #64748b !important; }
+:root.light-theme .border-slate-400 { border-color: #475569 !important; }
+
+:root.light-theme .text-white { color: #0f172a !important; }
+:root.light-theme .text-slate-300 { color: #334155 !important; }
+:root.light-theme .text-slate-200 { color: #1e293b !important; }
+:root.light-theme .text-gray-700 { color: #475569 !important; }
+:root.light-theme .text-gray-600 { color: #64748b !important; }
+:root.light-theme .text-gray-500 { color: #64748b !important; }
+:root.light-theme .text-gray-400 { color: #334155 !important; }
+:root.light-theme .text-gray-300 { color: #1e293b !important; }
+:root.light-theme .text-gray-200 { color: #0f172a !important; }
+
+:root.light-theme .bg-gray-950\/90 { background-color: rgba(248, 250, 252, 0.95) !important; }
+
+:root.light-theme .text-cyan-100,
+:root.light-theme .text-cyan-200,
+:root.light-theme .text-cyan-300,
+:root.light-theme .text-cyan-400 { color: #0e7490 !important; }
+:root.light-theme .text-blue-300,
+:root.light-theme .text-blue-400 { color: #1d4ed8 !important; }
+:root.light-theme .text-emerald-200,
+:root.light-theme .text-emerald-300,
+:root.light-theme .text-emerald-400 { color: #047857 !important; }
+:root.light-theme .text-amber-300,
+:root.light-theme .text-amber-300\/80,
+:root.light-theme .text-amber-400 { color: #b45309 !important; }
+:root.light-theme .text-rose-300,
+:root.light-theme .text-rose-400 { color: #be123c !important; }
+:root.light-theme .text-orange-300 { color: #c2410c !important; }
+
+:root.light-theme .bg-cyan-900\/20,
+:root.light-theme .bg-cyan-900\/30,
+:root.light-theme .bg-cyan-900\/40,
+:root.light-theme .bg-cyan-900\/50,
+:root.light-theme .bg-cyan-700\/50,
+:root.light-theme .bg-cyan-800\/30,
+:root.light-theme .bg-cyan-800 { background-color: #cffafe !important; }
+:root.light-theme .bg-blue-900\/20,
+:root.light-theme .bg-blue-900\/40,
+:root.light-theme .bg-blue-800\/30 { background-color: #dbeafe !important; }
+:root.light-theme .bg-emerald-900\/20,
+:root.light-theme .bg-emerald-900\/30,
+:root.light-theme .bg-emerald-800\/30 { background-color: #d1fae5 !important; }
+:root.light-theme .bg-amber-900\/20,
+:root.light-theme .bg-amber-900\/30,
+:root.light-theme .bg-amber-900\/40,
+:root.light-theme .bg-amber-800\/30 { background-color: #fef3c7 !important; }
+:root.light-theme .bg-rose-900\/20,
+:root.light-theme .bg-rose-900\/30,
+:root.light-theme .bg-rose-900\/40,
+:root.light-theme .bg-rose-800\/30 { background-color: #ffe4e6 !important; }
+
+:root.light-theme .border-cyan-800,
+:root.light-theme .border-cyan-800\/50,
+:root.light-theme .border-cyan-700,
+:root.light-theme .border-cyan-600,
+:root.light-theme .border-cyan-500,
+:root.light-theme .border-cyan-400 { border-color: #0891b2 !important; }
+:root.light-theme .border-blue-800,
+:root.light-theme .border-blue-800\/50,
+:root.light-theme .border-blue-500,
+:root.light-theme .border-blue-400 { border-color: #2563eb !important; }
+:root.light-theme .border-emerald-800,
+:root.light-theme .border-emerald-700,
+:root.light-theme .border-emerald-600,
+:root.light-theme .border-emerald-500,
+:root.light-theme .border-emerald-400 { border-color: #059669 !important; }
+:root.light-theme .border-amber-800,
+:root.light-theme .border-amber-800\/40,
+:root.light-theme .border-amber-700,
+:root.light-theme .border-amber-500,
+:root.light-theme .border-amber-400,
+:root.light-theme .border-amber-300 { border-color: #d97706 !important; }
+:root.light-theme .border-rose-800,
+:root.light-theme .border-rose-700,
+:root.light-theme .border-rose-500,
+:root.light-theme .border-rose-400 { border-color: #e11d48 !important; }
+
+:root.light-theme .bg-cyan-700,
+:root.light-theme .bg-cyan-600,
+:root.light-theme .bg-cyan-500,
+:root.light-theme .bg-emerald-700,
+:root.light-theme .bg-emerald-600,
+:root.light-theme .bg-emerald-500,
+:root.light-theme .bg-blue-500,
+:root.light-theme .bg-rose-500 { color: #ffffff !important; }
+:root.light-theme .bg-cyan-700.text-white,
+:root.light-theme .bg-cyan-600.text-white,
+:root.light-theme .bg-cyan-500.text-white,
+:root.light-theme .bg-emerald-700.text-white,
+:root.light-theme .bg-emerald-600.text-white,
+:root.light-theme .bg-emerald-500.text-white,
+:root.light-theme .bg-blue-500.text-white,
+:root.light-theme .bg-rose-500.text-white { color: #ffffff !important; }
+
+:root.light-theme .tag-easy {
+  color: #047857 !important;
+  background-color: #d1fae5 !important;
+  border-color: #34d399 !important;
+}
+:root.light-theme .tag-medium {
+  color: #b45309 !important;
+  background-color: #fef3c7 !important;
+  border-color: #f59e0b !important;
+}
+:root.light-theme .tag-hard {
+  color: #be123c !important;
+  background-color: #ffe4e6 !important;
+  border-color: #fb7185 !important;
+}
+
+:root.light-theme .hover\:bg-gray-800:hover,
+:root.light-theme .hover\:bg-gray-800\/50:hover { background-color: #e2e8f0 !important; }
+:root.light-theme .hover\:text-gray-100:hover,
+:root.light-theme .hover\:text-gray-200:hover,
+:root.light-theme .hover\:text-gray-300:hover { color: #0f172a !important; }
